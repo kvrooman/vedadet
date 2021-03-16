@@ -166,5 +166,5 @@ if __name__ == '__main__':
                     'src/cuda/deform_pool_cuda.cpp',
                     'src/cuda/deform_pool_cuda_kernel.cu'
                 ])],
-        cmdclass={'build_ext': BuildExtension},
+        cmdclass={'build_ext': BuildExtension.with_options(use_ninja=False)},
         zip_safe=False)
